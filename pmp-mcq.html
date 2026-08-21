@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMP Certification Revision Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 min-h-screen text-slate-800 flex items-center justify-center p-4 sm:p-8">
+
+    <div id="app" class="w-full max-w-3xl bg-white rounded-2xl shadow-xl overflow-hidden min-h-[500px] flex flex-col fade-in">
+        <!-- App content will be injected here via JavaScript -->
+    </div>
+
+    <script>
+        // Quiz Data in JSON format - Expanded to 42 Questions
+        const quizData = {
+          "questions": [
+            {
+              "questionNumber": 1,
+              "question": "A project manager in an agile environment notices that the development team is constantly being interrupted by stakeholders requesting ad-hoc status updates. What should the project manager do?",
+              "answerOptions": [
+                {
+                  "text": "Act as a servant leader by shielding the team from interruptions and facilitating better communication channels.",
+                  "rationale": "In agile, the project manager or Scrum Master acts as a servant leader, protecting the team's focus and productivity by managing external distractions.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Tell the stakeholders to wait until the sprint review to get any project updates.",
+                  "rationale": "While the sprint review is a formal update point, completely blocking stakeholder visibility in between goes against agile transparency principles.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Invite the stakeholders to the daily standup so they can get their updates directly from the team.",
+                  "rationale": "Daily standups are for the team to coordinate their work, not for reporting status to external stakeholders.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Ask the product owner to handle all stakeholder communications to free up the team.",
+                  "rationale": "While the product owner manages stakeholder requirements, protecting the team from process interruptions is primarily the role of the agile project manager or scrum master.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Think about the core role of a project manager or Scrum Master in an agile setup regarding team productivity."
+            },
+            {
+              "questionNumber": 2,
+              "question": "During the execution phase of a construction project, a newly identified risk occurs that was not previously recorded in the risk register. What is the very first action the project manager should take?",
+              "answerOptions": [
+                {
+                  "text": "Update the risk register with the new risk.",
+                  "rationale": "The first step in managing any new risk is documenting it so that it can be formally analyzed and tracked through the project's risk management process.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Implement a workaround immediately to minimize the project impact.",
+                  "rationale": "Jumping to action before documenting and analyzing the risk can lead to uncoordinated and potentially harmful responses.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Request a change order for more funds from the sponsor to cover potential damages.",
+                  "rationale": "Requesting funds is premature until the risk has been formally documented, analyzed, and a response strategy approved.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Perform a qualitative risk analysis on the event.",
+                  "rationale": "You cannot formally analyze a risk before you have documented its existence in the register.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Consider the formal procedure for handling newly discovered information in project management before taking analytical or corrective action."
+            },
+            {
+              "questionNumber": 3,
+              "question": "A key stakeholder who was previously a champion for your project has suddenly become resistant and is threatening to withhold critical funding. What is the best approach to handle this situation?",
+              "answerOptions": [
+                {
+                  "text": "Review the stakeholder engagement plan and meet with the stakeholder to understand the root cause of their concerns.",
+                  "rationale": "Direct communication is essential to uncover the reasons behind the shift in attitude and update the engagement strategy accordingly.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Escalate the issue immediately to the project sponsor for intervention.",
+                  "rationale": "Escalation should be a last resort after the project manager has attempted to resolve the issue directly.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Remove the stakeholder from the communications management plan to isolate their negativity.",
+                  "rationale": "Ignoring or isolating a key stakeholder with funding authority will likely cause the project to fail.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Inform the project team so they can adjust their deliverables to appease the stakeholder.",
+                  "rationale": "Adjusting deliverables without formal change control can lead to scope creep and wasted effort.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Choose the option that emphasizes direct communication and problem-solving over avoidance or immediate escalation."
+            },
+            {
+              "questionNumber": 4,
+              "question": "The client requests a small feature addition that they claim will not take much time. The project is currently slightly ahead of schedule. What should the project manager do next?",
+              "answerOptions": [
+                {
+                  "text": "Follow the formal change control process to evaluate the impact of the request.",
+                  "rationale": "Regardless of the project's current schedule status or the perceived size of the change, all scope additions must pass through formal Integrated Change Control.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Reject the request because it is outside the approved project scope baseline.",
+                  "rationale": "Rejecting a request outright without evaluation ignores the purpose of the change control process.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Approve the request since the project is ahead of schedule and it builds good client relations.",
+                  "rationale": "Approving scope changes without formal evaluation is called scope creep.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Ask the team to implement the feature if they have spare capacity during the current work period.",
+                  "rationale": "Having the team do unofficial work is a prime example of gold plating or scope creep.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Think about the golden rule of scope management when any deviation from the baseline is requested."
+            },
+            {
+              "questionNumber": 5,
+              "question": "Two key team members are having a strong disagreement over the technical approach to a critical deliverable. The disagreement is starting to affect team morale and project progress. What is the most appropriate conflict resolution technique for the project manager to use?",
+              "answerOptions": [
+                {
+                  "text": "Collaborate / Problem Solve",
+                  "rationale": "Collaborating or problem-solving directly addresses the root cause of the conflict and seeks a win-win solution, making it the most effective technique for lasting resolution.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Force / Direct",
+                  "rationale": "Forcing imposes a single viewpoint at the expense of another, which will likely further damage team morale.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Smooth / Accommodate",
+                  "rationale": "Smoothing focuses on areas of agreement to temporarily de-escalate tension, but it does not resolve the underlying disagreement.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Avoid / Withdraw",
+                  "rationale": "Avoiding the conflict allows it to fester.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Which conflict resolution technique is generally considered the best because it aims for a win-win outcome and permanent resolution?"
+            },
+            {
+              "questionNumber": 6,
+              "question": "A project activity has an optimistic estimate of 10 days, a most likely estimate of 15 days, and a pessimistic estimate of 26 days. Using the PERT (Beta distribution) formula, what is the expected duration of this activity?",
+              "answerOptions": [
+                {
+                  "text": "16 days",
+                  "rationale": "The Beta distribution formula is Expected Duration = (Optimistic + 4*Most Likely + Pessimistic) / 6. Here: (10 + 4(15) + 26) / 6 = 96 / 6 = 16 days.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "17 days",
+                  "rationale": "This is the result of the Triangular distribution formula (Optimistic + Most Likely + Pessimistic) / 3.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "15 days",
+                  "rationale": "This is simply the most likely estimate.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "20 days",
+                  "rationale": "This value does not correspond to standard estimating formulas.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Recall the Beta distribution formula which heavily weights the 'most likely' estimate: E = (O + 4M + P) / 6."
+            },
+            {
+              "questionNumber": 7,
+              "question": "The project team is finalizing a contract for an external vendor to provide specialized software development. The project requirements are not completely defined at this stage and will likely evolve significantly over time. Which type of contract is most appropriate?",
+              "answerOptions": [
+                {
+                  "text": "Time and Materials (T&M) or Cost-Reimbursable",
+                  "rationale": "T&M or Cost-Reimbursable contracts are best suited for situations where the exact scope of work cannot be quickly or accurately prescribed.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Firm Fixed Price (FFP)",
+                  "rationale": "Fixed Price contracts require a very well-defined scope of work.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Fixed Price Incentive Fee (FPIF)",
+                  "rationale": "This still relies on a fixed price base, which is risky if requirements change significantly.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Fixed Price with Economic Price Adjustment (FP-EPA)",
+                  "rationale": "Used for long-term contracts to protect against inflation, but still requires a defined initial scope.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "If the scope is vague or expected to change, which contract type offers the flexibility needed?"
+            },
+            {
+              "questionNumber": 8,
+              "question": "During quality control inspections, a repetitive defect is found in a manufactured component. The project manager wants to determine the root cause of this specific defect. Which quality tool should the project manager use?",
+              "answerOptions": [
+                {
+                  "text": "Ishikawa (Fishbone) diagram",
+                  "rationale": "Also known as a cause-and-effect diagram, it is specifically designed to visually trace a problem back to its root cause.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Pareto chart",
+                  "rationale": "A Pareto chart helps identify which problems are the most frequent, not diagnose a specific root cause.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Control chart",
+                  "rationale": "Used to determine if a process is stable or has predictable performance.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Scatter diagram",
+                  "rationale": "Used to show the relationship between two variables.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Look for the tool that is famously structured like an animal's skeleton."
+            },
+            {
+              "questionNumber": 9,
+              "question": "A project team consists of 12 members. How many potential communication channels exist within this team?",
+              "answerOptions": [
+                {
+                  "text": "66",
+                  "rationale": "The formula for communication channels is N(N-1)/2. With 12 members, it is 12(11)/2 = 132/2 = 66.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "132",
+                  "rationale": "This forgets to divide by 2.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "144",
+                  "rationale": "This is simply N squared.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "12",
+                  "rationale": "This is just the number of team members.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Use the communication channels formula: N(N-1)/2."
+            },
+            {
+              "questionNumber": 10,
+              "question": "A project has just been formally authorized, and the project manager has been named with the authority to apply organizational resources to project activities. What document was just approved to allow this to happen?",
+              "answerOptions": [
+                {
+                  "text": "Project Charter",
+                  "rationale": "The Project Charter formally authorizes the existence of a project and provides the project manager with the authority to apply resources.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Project Management Plan",
+                  "rationale": "Created after the charter is approved; details how the project will be executed.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Business Case",
+                  "rationale": "Justifies the investment and is an input to creating the Project Charter.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Scope Statement",
+                  "rationale": "Details the deliverables and is developed during the planning phase.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "What is the very first formal document created in the 'Initiating' process group?"
+            },
+            {
+              "questionNumber": 11,
+              "question": "An agile team is experiencing a bottleneck in their workflow. Development is fast, but testing is lagging behind, causing work to pile up. What agile practice should the team implement to manage this?",
+              "answerOptions": [
+                {
+                  "text": "Implement Work In Progress (WIP) limits.",
+                  "rationale": "WIP limits restrict the maximum amount of work in a workflow stage, forcing the team to swarm and resolve bottlenecks (like testing) before pulling new work.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Extend the sprint duration to allow more time for testing.",
+                  "rationale": "Agile relies on fixed-time iterations (timeboxing). Extending the sprint breaks this cadence and masks the underlying workflow issue.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Hire more testers immediately.",
+                  "rationale": "Adding resources might not be feasible or efficient in the short term, and it's better to optimize the existing workflow first.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Ask developers to bypass unit testing to speed up the process.",
+                  "rationale": "Bypassing quality checks sacrifices long-term stability and product quality for short-term speed, which is an anti-pattern.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "What Kanban technique is explicitly designed to reveal bottlenecks and balance workflow?"
+            },
+            {
+              "questionNumber": 12,
+              "question": "A project's Schedule Performance Index (SPI) is 0.85 and its Cost Performance Index (CPI) is 1.15. How would you describe the current status of this project?",
+              "answerOptions": [
+                {
+                  "text": "Behind schedule and under budget.",
+                  "rationale": "An SPI less than 1.0 indicates the project is behind schedule. A CPI greater than 1.0 indicates the project is under budget.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Ahead of schedule and over budget.",
+                  "rationale": "This would require an SPI > 1.0 and a CPI < 1.0.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Behind schedule and over budget.",
+                  "rationale": "This would require both SPI and CPI to be < 1.0.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Ahead of schedule and under budget.",
+                  "rationale": "This would require both SPI and CPI to be > 1.0.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Remember the EVM rule: For both SPI and CPI, a value greater than 1.0 is good, and less than 1.0 is bad."
+            },
+            {
+              "questionNumber": 13,
+              "question": "You are managing a global team. During recent meetings, team members have been openly arguing about methodologies and testing boundaries with each other. According to the Tuckman ladder of team development, which stage is the team currently in?",
+              "answerOptions": [
+                {
+                  "text": "Storming",
+                  "rationale": "The Storming phase is characterized by conflict, resistance to rules, and arguing as team members vie for position and establish boundaries.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Forming",
+                  "rationale": "Forming is the initial stage where people are usually polite and independent as they get to know each other.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Norming",
+                  "rationale": "In Norming, the team begins to resolve differences, appreciate colleagues' strengths, and work cohesively.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Performing",
+                  "rationale": "In Performing, the team is highly effective, interdependent, and requires little supervision.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Think of the stage that implies turbulence and conflict."
+            },
+            {
+              "questionNumber": 14,
+              "question": "A project manager identifies a significant risk that a critical piece of hardware might be damaged during overseas shipping. To address this, the project manager purchases premium freight insurance. What risk response strategy is being used?",
+              "answerOptions": [
+                {
+                  "text": "Transfer",
+                  "rationale": "Transferring a risk involves shifting the financial impact and ownership of the risk to a third party, most commonly through insurance, warranties, or contracts.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Mitigate",
+                  "rationale": "Mitigation involves taking action to reduce the probability or impact of the risk (e.g., using better packaging).",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Avoid",
+                  "rationale": "Avoidance involves eliminating the threat entirely (e.g., sourcing the hardware locally so it doesn't need overseas shipping).",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Accept",
+                  "rationale": "Acceptance means taking no proactive action and dealing with the consequences if the risk occurs.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Buying insurance shifts the financial burden to someone else."
+            },
+            {
+              "questionNumber": 15,
+              "question": "In a Work Breakdown Structure (WBS), what is the lowest level of decomposition called?",
+              "answerOptions": [
+                {
+                  "text": "Work Package",
+                  "rationale": "The work package is the lowest level of the WBS, where cost and duration can be reliably estimated and managed.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Control Account",
+                  "rationale": "A control account is a management control point where scope, budget, and schedule are integrated, typically placed above the work package level.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Activity",
+                  "rationale": "Activities are derived from work packages during schedule management; they are not part of the WBS itself.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Planning Package",
+                  "rationale": "A planning package is a WBS component below the control account but above the work package, used for known work without detailed schedule activities.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "It is the 'package' of work that is assigned to a team member or vendor."
+            },
+            {
+              "questionNumber": 16,
+              "question": "To ensure that project deliverables meet quality standards, the project manager invests heavily in team training and high-quality materials. In the Cost of Quality framework, what type of costs are these?",
+              "answerOptions": [
+                {
+                  "text": "Prevention Costs",
+                  "rationale": "Prevention costs (a subset of Cost of Conformance) are costs incurred to keep defects out of the hands of customers, such as training, good materials, and proper processes.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Appraisal Costs",
+                  "rationale": "Appraisal costs relate to assessing or inspecting the product to find defects (e.g., testing, inspections).",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Internal Failure Costs",
+                  "rationale": "Costs incurred when a defect is found before the product reaches the customer (e.g., rework, scrap).",
+                  "isCorrect": false
+                },
+                {
+                  "text": "External Failure Costs",
+                  "rationale": "Costs incurred when a defect reaches the customer (e.g., warranties, lost business, liabilities).",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "These costs are incurred proactively to ensure things are done right the first time."
+            },
+            {
+              "questionNumber": 17,
+              "question": "The project sponsor walks past your desk and casually mentions that they want to add a new security protocol to the software currently in development. What should you do first?",
+              "answerOptions": [
+                {
+                  "text": "Ask the sponsor to formally document and submit a change request.",
+                  "rationale": "All changes to the project baseline must be formally documented and processed through Integrated Change Control, regardless of who requests them.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Immediately halt development to assess the impact of the new protocol.",
+                  "rationale": "Halting development is disruptive. The change request must be documented first before formal impact assessment takes place.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Implement the change since the request came directly from the sponsor.",
+                  "rationale": "Implementing undocumented changes leads to scope creep and circumvents the change control board.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Update the project scope statement to include the new protocol.",
+                  "rationale": "You cannot update baselines until a formal change request has been approved.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Even for VIPs, verbal requests are not sufficient for changing baselines."
+            },
+            {
+              "questionNumber": 18,
+              "question": "You are performing a stakeholder analysis. You identify a regulatory body that has the power to shut down your project, but they are not actively involved in the day-to-day project activities. According to the Power/Interest grid, how should you manage them?",
+              "answerOptions": [
+                {
+                  "text": "Keep Satisfied",
+                  "rationale": "Stakeholders with High Power and Low Interest should be kept satisfied to ensure they do not use their power to negatively impact the project.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Manage Closely",
+                  "rationale": "This strategy is for stakeholders with High Power and High Interest.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Keep Informed",
+                  "rationale": "This strategy is for stakeholders with Low Power and High Interest.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Monitor",
+                  "rationale": "This strategy is for stakeholders with Low Power and Low Interest.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "They have the 'power' to hurt you, but lack the 'interest' to be involved daily."
+            },
+            {
+              "questionNumber": 19,
+              "question": "A project is prematurely terminated because the market window for the product has closed. You have several open contracts with vendors. What is the most appropriate action to take regarding these vendors?",
+              "answerOptions": [
+                {
+                  "text": "Follow the formal procurement closure process and terminate the contracts for convenience as stipulated in the agreements.",
+                  "rationale": "Even when a project ends prematurely, formal closure procedures must be followed, including triggering the termination for convenience clauses in vendor contracts.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Stop paying the vendors immediately since the project is cancelled.",
+                  "rationale": "Stopping payments without following contract terms is a breach of contract and exposes the organization to legal risk.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Transfer the open contracts to a different ongoing project.",
+                  "rationale": "Contracts are usually tied to specific scopes of work and project funds; they cannot simply be transferred without formal renegotiation.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Ask the vendors to complete their deliverables so they can be stored for future use.",
+                  "rationale": "If the project is cancelled, spending further budget on completing unnecessary deliverables is a waste of organizational resources.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Contracts are legally binding documents that have specific clauses for early termination."
+            },
+            {
+              "questionNumber": 20,
+              "question": "In an Agile Scrum framework, who has the primary responsibility for maximizing the value of the product and prioritizing the work in the backlog?",
+              "answerOptions": [
+                {
+                  "text": "The Product Owner",
+                  "rationale": "The Product Owner represents the business/customer, maintains the product vision, and is solely responsible for prioritizing the Product Backlog to maximize value.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "The Scrum Master",
+                  "rationale": "The Scrum Master is a servant leader who facilitates the process and removes impediments, but does not prioritize features.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "The Development Team",
+                  "rationale": "The team decides *how* to do the work and estimates effort, but they do not decide the priority of business features.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "The Project Sponsor",
+                  "rationale": "The sponsor provides funding and high-level direction, but the day-to-day prioritization is delegated to the Product Owner.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Which role represents the voice of the customer in Scrum?"
+            },
+            {
+              "questionNumber": 21,
+              "question": "An agile team is using story points to estimate their user stories. What do story points primarily represent?",
+              "answerOptions": [
+                {
+                  "text": "The relative effort, complexity, and risk associated with implementing a story.",
+                  "rationale": "Story points are a measure of relative sizing, taking into account effort, complexity, and uncertainty, rather than absolute time.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "The exact number of hours required to complete a task.",
+                  "rationale": "Story points are specifically designed to avoid estimating in exact hours, which is notoriously inaccurate for complex knowledge work.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "The business value of the feature to the customer.",
+                  "rationale": "Business value is prioritized by the Product Owner, while story points are estimated by the developers to size the work.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "The number of developers needed to finish the story in one sprint.",
+                  "rationale": "Story points measure the work itself, not the headcount required to do it.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Story points are a relative measure, usually using the Fibonacci sequence."
+            },
+            {
+              "questionNumber": 22,
+              "question": "A project manager is facilitating a meeting to identify risks for a new infrastructure project. Which of the following tools or techniques would be most useful in this specific scenario?",
+              "answerOptions": [
+                {
+                  "text": "Brainstorming and SWOT Analysis",
+                  "rationale": "Brainstorming is a primary technique for gathering diverse risks, and SWOT (Strengths, Weaknesses, Opportunities, Threats) provides a structured way to identify both negative risks and positive opportunities.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Monte Carlo Simulation",
+                  "rationale": "Monte Carlo is a quantitative risk analysis tool used *after* risks are identified to determine overall project risk, not to identify individual risks.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Expected Monetary Value (EMV)",
+                  "rationale": "EMV is used in quantitative risk analysis to calculate the financial impact of risks, not to identify them.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Tornado Diagram",
+                  "rationale": "A Tornado diagram is used in sensitivity analysis to compare the relative importance of variables, used during quantitative analysis.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Look for techniques aimed at generating ideas and uncovering unknowns at the beginning of the risk process."
+            },
+            {
+              "questionNumber": 23,
+              "question": "When analyzing a project schedule network diagram, an activity is found to be on the critical path. What is the total float for this activity?",
+              "answerOptions": [
+                {
+                  "text": "Zero",
+                  "rationale": "By definition, the critical path is the longest path through the network diagram, and activities on it have zero total float (slack). Any delay in these activities delays the project.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Greater than zero",
+                  "rationale": "Activities with float greater than zero are on non-critical paths.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Less than zero",
+                  "rationale": "Negative float means the project is already behind schedule relative to a mandated completion date.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Equal to the duration of the activity",
+                  "rationale": "Float is independent of the activity's own duration.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "If this activity is delayed by even one day, the entire project finishes late."
+            },
+            {
+              "questionNumber": 24,
+              "question": "A project is heavily behind schedule. The project manager decides to authorize overtime and hire additional contractors to complete critical path activities faster, though this will increase the project cost. Which schedule compression technique is being used?",
+              "answerOptions": [
+                {
+                  "text": "Crashing",
+                  "rationale": "Crashing involves adding resources (cost) to activities on the critical path to shorten their duration.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Fast Tracking",
+                  "rationale": "Fast tracking involves performing activities in parallel that were originally planned in sequence; it increases risk but does not necessarily cost more.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Resource Leveling",
+                  "rationale": "Resource leveling resolves over-allocations and usually *lengthens* the schedule.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Scope Reduction",
+                  "rationale": "While reducing scope can shorten a schedule, it changes the project deliverables, whereas schedule compression aims to maintain scope.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "You are trading money (cost) for time."
+            },
+            {
+              "questionNumber": 25,
+              "question": "A project has a Budget at Completion (BAC) of $100,000. The current Cost Performance Index (CPI) is 0.8. Assuming that current variances are typical and will continue at the same rate, what is the Estimate at Completion (EAC)?",
+              "answerOptions": [
+                {
+                  "text": "$125,000",
+                  "rationale": "When current variances are typical, the formula is EAC = BAC / CPI. Here, 100,000 / 0.8 = 125,000.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "$80,000",
+                  "rationale": "This would be the result if you incorrectly multiplied BAC by CPI.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "$100,000",
+                  "rationale": "This is the original BAC, which assumes future work will magically be completed at the budgeted rate despite past failures.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "$108,000",
+                  "rationale": "This number is mathematically unrelated to standard EVM formulas.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Divide the original budget by the cost efficiency index."
+            },
+            {
+              "questionNumber": 26,
+              "question": "The project management office (PMO) has created a central intranet portal containing all project templates, historical records, and policy manuals for project managers to access at their convenience. What communication method is this?",
+              "answerOptions": [
+                {
+                  "text": "Pull communication",
+                  "rationale": "Pull communication requires recipients to access the information at their own discretion (e.g., portals, knowledge bases, intranet sites).",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Push communication",
+                  "rationale": "Push communication is sent directly to specific recipients who need to receive it (e.g., emails, memos).",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Interactive communication",
+                  "rationale": "Interactive communication involves multi-directional exchange of information in real-time (e.g., meetings, phone calls).",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Formal communication",
+                  "rationale": "While it may contain formal documents, the *method* of delivery is pull.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Users have to go get the information themselves."
+            },
+            {
+              "questionNumber": 27,
+              "question": "During a heated discussion over software architecture, the project manager steps in and says, 'Let's table the architecture debate for now and focus on the database schema where we already have agreement.' What conflict resolution technique is being used?",
+              "answerOptions": [
+                {
+                  "text": "Smoothing / Accommodating",
+                  "rationale": "Smoothing involves downplaying differences and emphasizing areas of agreement to maintain harmony.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Collaborating / Problem Solving",
+                  "rationale": "Collaborating would involve tackling the architecture debate head-on to find a solution.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Compromising / Reconciling",
+                  "rationale": "Compromising would mean both sides giving up something to reach a middle ground on the architecture.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Forcing / Directing",
+                  "rationale": "Forcing would involve the PM deciding on the architecture themselves.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Focusing on areas of agreement rather than resolving the core issue."
+            },
+            {
+              "questionNumber": 28,
+              "question": "In the context of servant leadership, what is the primary role of the project manager or Scrum Master?",
+              "answerOptions": [
+                {
+                  "text": "Removing impediments and supporting the team's professional development.",
+                  "rationale": "A servant leader focuses on the needs of the team, shielding them from distractions, and removing roadblocks so they can perform at their best.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Assigning daily tasks to ensure everyone is busy.",
+                  "rationale": "In agile, the team is self-organizing and pulls their own work; the PM does not micro-manage tasks.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Reporting status updates to executive management.",
+                  "rationale": "While status reporting happens, the *primary* role of a servant leader is team enablement.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Approving changes to the product scope.",
+                  "rationale": "The Product Owner is responsible for product scope and backlog prioritization.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Servant leaders serve the team first, rather than commanding them."
+            },
+            {
+              "questionNumber": 29,
+              "question": "An organization is transitioning from a traditional predictive (waterfall) methodology to an agile framework. The team members are confused about their new roles and the new ceremonies. What should the project manager do first?",
+              "answerOptions": [
+                {
+                  "text": "Provide coaching, mentoring, and formal training on agile principles and practices.",
+                  "rationale": "Transitioning methodologies is a major cultural and operational shift. Educating the team is the foundational first step to successful adoption.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Immediately start the first sprint so they can learn by doing.",
+                  "rationale": "Starting without baseline knowledge will lead to frustration, failure, and rejection of the agile process.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Revert to the predictive methodology since the team is uncomfortable.",
+                  "rationale": "Reverting abandons the organizational strategy. Discomfort is normal during a transition and should be managed with training.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Fire the confused team members and hire experienced agile practitioners.",
+                  "rationale": "This is extreme, unethical, and ignores the PM's responsibility to develop their team.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Change management requires education before execution."
+            },
+            {
+              "questionNumber": 30,
+              "question": "What is the primary difference between the 'Control Quality' process and the 'Validate Scope' process?",
+              "answerOptions": [
+                {
+                  "text": "Control Quality focuses on correctness of deliverables (internal), while Validate Scope focuses on acceptance of deliverables (external).",
+                  "rationale": "Quality control is done by the project team to ensure standards are met. Validate Scope is done with the customer/sponsor to gain formal acceptance.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Control Quality happens at the end of the project, while Validate Scope happens continuously.",
+                  "rationale": "Both happen throughout the project lifecycle as deliverables are produced.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Validate Scope is an executing process, while Control Quality is a monitoring and controlling process.",
+                  "rationale": "Both are Monitoring and Controlling processes.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "There is no difference; they are interchangeable terms for testing.",
+                  "rationale": "They serve distinctly different purposes (correctness vs. acceptance).",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "One asks, 'Did we build it right?' The other asks, 'Will the customer accept it?'"
+            },
+            {
+              "questionNumber": 31,
+              "question": "During project execution, an external quality assurance auditor arrives to review the project. What is the primary purpose of a quality audit?",
+              "answerOptions": [
+                {
+                  "text": "To determine if project activities comply with organizational and project policies, processes, and procedures.",
+                  "rationale": "Quality audits are a tool of Manage Quality (Quality Assurance) aimed at checking process compliance and identifying areas for process improvement.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "To inspect specific deliverables for defects before they are shown to the customer.",
+                  "rationale": "Inspecting specific deliverables is Quality Control (testing/inspection), not Quality Assurance (auditing).",
+                  "isCorrect": false
+                },
+                {
+                  "text": "To evaluate the performance of individual team members for their annual reviews.",
+                  "rationale": "Audits evaluate processes, not individual HR performance.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "To calculate the Cost of Quality for the project budget.",
+                  "rationale": "While audits are part of the cost of quality, calculating the budget is not their primary purpose.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Audits are about process compliance, not product inspection."
+            },
+            {
+              "questionNumber": 32,
+              "question": "During a construction project, an unforeseen 'Act of God' weather event causes a major delay and significant costs. The risk was completely unidentified (an unknown-unknown). From which budget should the project manager request funds to cover this?",
+              "answerOptions": [
+                {
+                  "text": "Management Reserve",
+                  "rationale": "The Management Reserve is established specifically for unforeseen work that is within the scope of the project but was totally unidentified (unknown-unknowns).",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Contingency Reserve",
+                  "rationale": "The Contingency Reserve is for identified risks that have been actively planned for (known-unknowns).",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Cost Baseline",
+                  "rationale": "The cost baseline includes the contingency reserve but does NOT include the management reserve.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Project Profit Margin",
+                  "rationale": "This is not a standard project management funding category for risks.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Known-unknowns use Contingency. Unknown-unknowns use what?"
+            },
+            {
+              "questionNumber": 33,
+              "question": "You realize a department head will be heavily impacted by your project, but upon meeting them, you discover they have no idea the project even exists. How would you classify their current engagement level?",
+              "answerOptions": [
+                {
+                  "text": "Unaware",
+                  "rationale": "The stakeholder does not know about the project or its potential impacts, fitting the definition of the 'Unaware' engagement state.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Resistant",
+                  "rationale": "Resistant means they know about the project and oppose it.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Neutral",
+                  "rationale": "Neutral means they know about it, but are neither supportive nor opposed.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Supportive",
+                  "rationale": "Supportive means they know about it and actively want it to succeed.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "The stakeholder literally does not know about the project."
+            },
+            {
+              "questionNumber": 34,
+              "question": "Your company needs a new billing software. The development team has the skills to build it, but they are currently assigned to other revenue-generating projects. You are deciding whether to build the software internally or purchase an off-the-shelf solution. What analysis are you performing?",
+              "answerOptions": [
+                {
+                  "text": "Make-or-Buy Analysis",
+                  "rationale": "This is a technique used in the Plan Procurement Management process to determine whether work or deliverables can best be accomplished by the project team or purchased from outside sources.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Cost-Benefit Analysis",
+                  "rationale": "While cost is a factor, the specific decision between internal creation vs external purchase is the Make-or-Buy analysis.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Source Selection Analysis",
+                  "rationale": "Source selection is used to choose between competing vendors *after* the decision to buy has been made.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Vendor Bid Analysis",
+                  "rationale": "This evaluates vendor proposals, which happens later in the procurement process.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "You are deciding whether to produce the item yourself or acquire it from a seller."
+            },
+            {
+              "questionNumber": 35,
+              "question": "An agile startup is building a new mobile app. Instead of building the entire app, they release a basic version with just enough features to satisfy early adopters and gather feedback for future development. What is this release called?",
+              "answerOptions": [
+                {
+                  "text": "Minimum Viable Product (MVP)",
+                  "rationale": "An MVP is the smallest, functional version of a product that can be released to gather validated learning about customers with the least effort.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Prototype",
+                  "rationale": "A prototype is usually an internal mockup or non-functional model to test design, not a released product for early adopters.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Sprint Goal",
+                  "rationale": "A Sprint Goal is an objective set for a single sprint, not the product release strategy itself.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Gold Plated Product",
+                  "rationale": "Gold plating refers to adding unnecessary features, which is the exact opposite of an MVP.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "It has the 'minimum' features to be 'viable' in the market."
+            },
+            {
+              "questionNumber": 36,
+              "question": "When should the project manager and project team update the Lessons Learned register?",
+              "answerOptions": [
+                {
+                  "text": "Throughout the entire project lifecycle.",
+                  "rationale": "Lessons learned should be documented continuously as they happen, allowing the current project to benefit from them immediately, rather than waiting until the end.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Only during the Closing phase of the project.",
+                  "rationale": "Waiting until the end is a common mistake; people forget details, and the current project cannot benefit from the learnings.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "During the Planning phase to anticipate mistakes.",
+                  "rationale": "During planning, you review historical lessons learned, but you generate new ones during execution.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Whenever a major project phase gate is reached.",
+                  "rationale": "While they are reviewed at phase gates, the *updating* should be continuous.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Continuous improvement requires continuous documentation."
+            },
+            {
+              "questionNumber": 37,
+              "question": "A critical resource on your project is double-booked and scheduled to work 120 hours next week. You adjust the start and finish dates of their activities so they only work 40 hours a week. However, this causes the critical path to increase. What technique did you use?",
+              "answerOptions": [
+                {
+                  "text": "Resource Leveling",
+                  "rationale": "Resource leveling resolves over-allocations by delaying activities, which often changes the critical path and extends the project duration.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Resource Smoothing",
+                  "rationale": "Resource smoothing limits resource usage within float boundaries, so it *never* changes the critical path or project end date.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Schedule Crashing",
+                  "rationale": "Crashing involves adding resources to shorten the schedule, not delaying activities.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Fast Tracking",
+                  "rationale": "Fast tracking runs activities in parallel to shorten the schedule.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "This technique balances demand with supply, but often sacrifices the schedule to do so."
+            },
+            {
+              "questionNumber": 38,
+              "question": "A stakeholder complains that they are receiving too many highly technical reports that they don't understand, and missing the high-level executive summaries they actually need. Which document should the project manager consult to fix this issue?",
+              "answerOptions": [
+                {
+                  "text": "Communications Management Plan",
+                  "rationale": "This plan details who receives what information, in what format, and at what frequency. It dictates the communication requirements of stakeholders.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Stakeholder Engagement Plan",
+                  "rationale": "While related, the engagement plan focuses on strategies to keep stakeholders supportive, whereas the Communications plan handles the logistics of reporting.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Project Charter",
+                  "rationale": "The charter is high-level and does not contain detailed reporting logistics.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Resource Management Plan",
+                  "rationale": "This deals with team acquisition and development, not stakeholder reporting.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Which plan dictates the 'who, what, when, and how' of project information distribution?"
+            },
+            {
+              "questionNumber": 39,
+              "question": "An agile team has completed 4 sprints. They completed 30 story points in Sprint 1, 35 in Sprint 2, 28 in Sprint 3, and 32 in Sprint 4. What metric is being tracked here, and how is it used?",
+              "answerOptions": [
+                {
+                  "text": "Velocity; used to predict how much work the team can handle in future sprints.",
+                  "rationale": "Velocity is the measure of how many story points a team completes in a sprint. Taking the average (approx 31 here) helps forecast future capacity.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Burn-down rate; used to show remaining work.",
+                  "rationale": "A burn-down chart shows remaining work, whereas the numbers provided reflect completed work capacity.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Lead time; used to measure how long a task takes from request to completion.",
+                  "rationale": "Lead time measures duration, not completed story points per iteration.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Earned Value; used to calculate project ROI.",
+                  "rationale": "Earned Value is a predictive financial metric, not typically measured in story points.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "This is the 'speed' at which an agile team completes work."
+            },
+            {
+              "questionNumber": 40,
+              "question": "During project planning, a risk is identified where a critical software license might expire before project completion. The team decides to set aside funds to renew the license if the expiration actually happens. What is this response strategy called?",
+              "answerOptions": [
+                {
+                  "text": "Contingency Plan (Active Acceptance)",
+                  "rationale": "Active acceptance involves acknowledging the risk and establishing a contingency reserve (time or money) to handle it if the trigger occurs.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "Avoid",
+                  "rationale": "Avoidance would mean changing the project plan to finish before the license expires, eliminating the threat.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Mitigate",
+                  "rationale": "Mitigation would involve renewing the license early to reduce the probability of the threat occurring.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "Passive Acceptance",
+                  "rationale": "Passive acceptance means doing absolutely nothing and figuring out a workaround only after the issue happens.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Setting aside specific funds for an identified risk is creating a..."
+            },
+            {
+              "questionNumber": 41,
+              "question": "A project is massively over budget and behind schedule. Management is deciding whether to kill the project or inject more funds. A sponsor argues they must continue because they have already spent $2 million. How should a project manager view this $2 million?",
+              "answerOptions": [
+                {
+                  "text": "It is a sunk cost and should not be considered when deciding whether to continue the project.",
+                  "rationale": "Sunk costs are monies already spent that cannot be recovered. Sound financial decisions are based on future potential (ETC/EAC), not past unrecoverable expenses.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "It is Earned Value that must be recovered.",
+                  "rationale": "Earned value is a measure of work performed, not just money spent. Money spent is Actual Cost (AC).",
+                  "isCorrect": false
+                },
+                {
+                  "text": "It is the Cost of Poor Quality.",
+                  "rationale": "While some of it might be wasted, the entire sum is not inherently a quality cost.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "It must be added to the project's Net Present Value (NPV).",
+                  "rationale": "Sunk costs are excluded from NPV and ROI calculations going forward.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "Money that has already been spent and cannot be recovered."
+            },
+            {
+              "questionNumber": 42,
+              "question": "In a predictive (waterfall) project, when is the project manager officially assigned to the project?",
+              "answerOptions": [
+                {
+                  "text": "During the initiation phase, when the Project Charter is being developed or approved.",
+                  "rationale": "The project manager should be assigned as early in the project as feasible, ideally while the charter is being developed and always prior to the start of planning.",
+                  "isCorrect": true
+                },
+                {
+                  "text": "After the project management plan has been fully approved by the sponsor.",
+                  "rationale": "The PM is responsible for creating the plan, so they must be assigned before planning begins.",
+                  "isCorrect": false
+                },
+                {
+                  "text": "During the execution phase, when the actual work begins.",
+                  "rationale": "The PM must lead planning, which happens before execution.",
+                  "is circulation": false
+                },
+                {
+                  "text": "When the business case is being written.",
+                  "rationale": "The business case is usually written by a sponsor or business analyst before the project is authorized or a PM is selected.",
+                  "isCorrect": false
+                }
+              ],
+              "hint": "The PM needs to be present to help build the foundations of the project."
+            }
+          ]
+        };
+
+        // Application State
+        let state = {
+            screen: 'start', // 'start', 'quiz', 'results'
+            currentQuestionIndex: 0,
+            score: 0,
+            selectedOptionIndex: null,
+            isAnswerSubmitted: false,
+            showHint: false,
+            answers: [] // store user's answers history
+        };
+
+        const appDiv = document.getElementById('app');
+
+        // Render functions
+        function render() {
+            appDiv.innerHTML = '';
+            
+            if (state.screen === 'start') {
+                appDiv.innerHTML = renderStartScreen();
+            } else if (state.screen === 'quiz') {
+                appDiv.innerHTML = renderQuizScreen();
+            } else if (state.screen === 'results') {
+                appDiv.innerHTML = renderResultsScreen();
+            }
+        }
+
+        function renderStartScreen() {
+            return `
+                <div class="p-10 flex flex-col items-center justify-center text-center h-full flex-grow fade-in">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-graduation-cap text-4xl text-blue-600"></i>
+                    </div>
+                    <h1 class="text-3xl font-bold text-slate-800 mb-4">PMP Certification Revision</h1>
+                    <p class="text-slate-500 mb-8 max-w-md">Test your knowledge with these ${quizData.questions.length} scenario-based questions covering Agile, Risk Management, Stakeholder Engagement, Formulas, EVM, and more.</p>
+                    <button onclick="startQuiz()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-200 ease-in-out transform hover:-translate-y-1">
+                        Start Quiz
+                    </button>
+                </div>
+            `;
+        }
+
+        function renderQuizScreen() {
+            const q = quizData.questions[state.currentQuestionIndex];
+            const totalQ = quizData.questions.length;
+            const progress = ((state.currentQuestionIndex) / totalQ) * 100;
+
+            let optionsHtml = '';
+            q.answerOptions.forEach((option, index) => {
+                let btnClass = "w-full text-left p-4 rounded-xl border-2 transition-all duration-200 cursor-pointer flex items-start gap-3 relative ";
+                let iconHtml = `<div class="mt-0.5 w-5 h-5 rounded-full border-2 border-slate-300 flex-shrink-0 flex items-center justify-center"></div>`;
+                
+                if (state.isAnswerSubmitted) {
+                    // Answer submitted states
+                    if (option.isCorrect) {
+                        btnClass += "border-green-500 bg-green-50 text-green-900 font-medium";
+                        iconHtml = `<div class="mt-0.5 text-green-500 flex-shrink-0"><i class="fa-solid fa-circle-check text-xl"></i></div>`;
+                    } else if (state.selectedOptionIndex === index && !option.isCorrect) {
+                        btnClass += "border-red-400 bg-red-50 text-red-900";
+                        iconHtml = `<div class="mt-0.5 text-red-400 flex-shrink-0"><i class="fa-solid fa-circle-xmark text-xl"></i></div>`;
+                    } else {
+                        btnClass += "border-slate-200 bg-white opacity-50 cursor-not-allowed";
+                    }
+                } else {
+                    // Selecting states
+                    if (state.selectedOptionIndex === index) {
+                        btnClass += "border-blue-500 bg-blue-50 ring-2 ring-blue-200";
+                        iconHtml = `<div class="mt-0.5 w-5 h-5 rounded-full border-4 border-blue-500 bg-white flex-shrink-0"></div>`;
+                    } else {
+                        btnClass += "border-slate-200 hover:border-blue-300 hover:bg-slate-50 bg-white";
+                    }
+                }
+
+                optionsHtml += `
+                    <button 
+                        onclick="!state.isAnswerSubmitted && selectOption(${index})" 
+                        class="${btnClass}"
+                        ${state.isAnswerSubmitted ? 'disabled' : ''}
+                    >
+                        ${iconHtml}
+                        <span class="flex-grow">${option.text}</span>
+                    </button>
+                `;
+            });
+
+            let feedbackHtml = '';
+            if (state.isAnswerSubmitted) {
+                const selectedOpt = q.answerOptions[state.selectedOptionIndex];
+                const isCorrect = selectedOpt.isCorrect;
+                
+                feedbackHtml = `
+                    <div class="mt-6 p-4 rounded-xl ${isCorrect ? 'bg-green-100 border border-green-200' : 'bg-red-100 border border-red-200'} fade-in">
+                        <h4 class="font-bold flex items-center gap-2 mb-2 ${isCorrect ? 'text-green-800' : 'text-red-800'}">
+                            ${isCorrect ? '<i class="fa-solid fa-check"></i> Correct!' : '<i class="fa-solid fa-xmark"></i> Incorrect'}
+                        </h4>
+                        <p class="text-sm text-slate-700"><strong>Rationale:</strong> ${selectedOpt.rationale}</p>
+                        ${!isCorrect ? `<p class="text-sm text-slate-700 mt-2"><strong>Correct Answer Rationale:</strong> ${q.answerOptions.find(o => o.isCorrect).rationale}</p>` : ''}
+                    </div>
+                `;
+            }
+
+            return `
+                <div class="flex flex-col h-full fade-in">
+                    <!-- Header & Progress -->
+                    <div class="px-6 py-4 border-b border-slate-100 bg-white sticky top-0 z-10">
+                        <div class="flex justify-between text-sm font-medium text-slate-500 mb-2">
+                            <span>Question ${state.currentQuestionIndex + 1} of ${totalQ}</span>
+                            <span>Score: ${state.score}</span>
+                        </div>
+                        <div class="w-full bg-slate-100 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full transition-all duration-500" style="width: ${progress}%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Question Content -->
+                    <div class="p-6 flex-grow overflow-y-auto max-h-[60vh]">
+                        <h2 class="text-xl font-semibold text-slate-800 mb-6 leading-relaxed">
+                            ${q.question}
+                        </h2>
+                        
+                        <div class="space-y-3">
+                            ${optionsHtml}
+                        </div>
+
+                        ${feedbackHtml}
+
+                        <!-- Hint Section -->
+                        ${!state.isAnswerSubmitted ? `
+                            <div class="mt-6">
+                                <button onclick="toggleHint()" class="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">
+                                    <i class="fa-regular fa-lightbulb"></i> ${state.showHint ? 'Hide Hint' : 'Show Hint'}
+                                </button>
+                                ${state.showHint ? `
+                                    <div class="mt-2 p-3 bg-blue-50 border border-blue-100 rounded-lg text-sm text-blue-800 fade-in italic">
+                                        ${q.hint}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                    </div>
+
+                    <!-- Footer Actions -->
+                    <div class="px-6 py-4 border-t border-slate-100 bg-slate-50 flex justify-end">
+                        ${!state.isAnswerSubmitted ? `
+                            <button 
+                                onclick="submitAnswer()" 
+                                class="bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white font-semibold py-2.5 px-6 rounded-lg transition duration-200"
+                                ${state.selectedOptionIndex === null ? 'disabled' : ''}
+                            >
+                                Submit Answer
+                            </button>
+                        ` : `
+                            <button 
+                                onclick="nextQuestion()" 
+                                class="bg-slate-800 hover:bg-slate-900 text-white font-semibold py-2.5 px-6 rounded-lg transition duration-200 flex items-center gap-2"
+                            >
+                                ${state.currentQuestionIndex < totalQ - 1 ? 'Next Question <i class="fa-solid fa-arrow-right"></i>' : 'View Results <i class="fa-solid fa-flag-checkered"></i>'}
+                            </button>
+                        `}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderResultsScreen() {
+            const total = quizData.questions.length;
+            const percentage = Math.round((state.score / total) * 100);
+            
+            let message = "";
+            let icon = "";
+            let colorClass = "";
+
+            if (percentage >= 80) {
+                message = "Outstanding! You are well-prepared for the exam.";
+                icon = "fa-trophy";
+                colorClass = "text-yellow-500";
+            } else if (percentage >= 60) {
+                message = "Good job! A little more revision and you'll be perfect.";
+                icon = "fa-thumbs-up";
+                colorClass = "text-blue-500";
+            } else {
+                message = "Keep studying! Focus on the explanations to improve.";
+                icon = "fa-book-open";
+                colorClass = "text-indigo-500";
+            }
+
+            return `
+                <div class="p-10 flex flex-col items-center justify-center text-center h-full flex-grow fade-in">
+                    <div class="w-24 h-24 bg-slate-50 rounded-full flex items-center justify-center mb-6 shadow-inner border border-slate-100">
+                        <i class="fa-solid ${icon} text-5xl ${colorClass}"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Quiz Complete!</h2>
+                    <div class="text-5xl font-extrabold text-slate-800 my-4">
+                        ${state.score} <span class="text-2xl text-slate-400 font-medium">/ ${total}</span>
+                    </div>
+                    <p class="text-lg font-medium text-slate-600 mb-2">${percentage}% Score</p>
+                    <p class="text-slate-500 mb-8 max-w-sm">${message}</p>
+                    
+                    <button onclick="restartQuiz()" class="bg-slate-800 hover:bg-slate-900 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-200 flex items-center gap-2">
+                        <i class="fa-solid fa-rotate-right"></i> Retake Quiz
+                    </button>
+                </div>
+            `;
+        }
+
+        // Actions
+        function startQuiz() {
+            state.screen = 'quiz';
+            state.currentQuestionIndex = 0;
+            state.score = 0;
+            state.selectedOptionIndex = null;
+            state.isAnswerSubmitted = false;
+            state.showHint = false;
+            state.answers = [];
+            render();
+        }
+
+        function selectOption(index) {
+            state.selectedOptionIndex = index;
+            render();
+        }
+
+        function toggleHint() {
+            state.showHint = !state.showHint;
+            render();
+        }
+
+        function submitAnswer() {
+            if (state.selectedOptionIndex === null) return;
+            
+            const q = quizData.questions[state.currentQuestionIndex];
+            const isCorrect = q.answerOptions[state.selectedOptionIndex].isCorrect;
+            
+            if (isCorrect) {
+                state.score++;
+            }
+            
+            state.answers.push({
+                questionIndex: state.currentQuestionIndex,
+                selectedOption: state.selectedOptionIndex,
+                isCorrect: isCorrect
+            });
+
+            state.isAnswerSubmitted = true;
+            render();
+        }
+
+        function nextQuestion() {
+            if (state.currentQuestionIndex < quizData.questions.length - 1) {
+                state.currentQuestionIndex++;
+                state.selectedOptionIndex = null;
+                state.isAnswerSubmitted = false;
+                state.showHint = false;
+                render();
+            } else {
+                state.screen = 'results';
+                render();
+            }
+        }
+
+        function restartQuiz() {
+            startQuiz();
+        }
+
+        // Initialize app
+        render();
+
+    </script>
+</body>
+</html>
