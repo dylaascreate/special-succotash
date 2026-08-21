@@ -1,0 +1,27 @@
+1. Zila - Explore
+2. Jailani - Explore
+3. Shaiful - Explore
+4. Syakir - Explore
+5. Ko - Explore
+6. Nazhi - Development - Expand
+7. Azmi - Development - Inhouse - Expand
+8. Zainurin Nordin - Development  - Explore
+9. Zuraimi Othman - Aplikasi Teras - Explore
+
+training
+training01
+
+su root 
+nano /etc/sudoers
+
+user_name ALL=(ALL)  ALL
+
+cd /etc/gitlab
+
+grep 'Password:' /etc/gitlab/initial_root_password
+
+sudo apt-get install --yes software-properties-common
+sudo update-ca-certificates
+
+curl -s https://packages.gitlab.com/gpg.key | sudo apt-key add -
+
