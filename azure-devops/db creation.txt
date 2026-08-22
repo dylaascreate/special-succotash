@@ -1,0 +1,62 @@
+CREATE DATABASE toy_sales;
+USE toy_sales;
+
+CREATE TABLE customers (
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE
+);
+
+CREATE TABLE products (
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    stock_quantity INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT NOT NULL,
+    order_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    order_status VARCHAR(30) DEFAULT 'Pending',
+
+    CONSTRAINT fk_orders_customer
+        FOREIGN KEY (customer_id)
+        REFERENCES customers(customer_id)
+);
+
+CREATE TABLE order_items (
+    order_item_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
+    unit_price DECIMAL(10,2) NOT NULL,
+
+    CONSTRAINT fk_items_order
+        FOREIGN KEY (order_id)
+        REFERENCES orders(order_id),
+
+    CONSTRAINT fk_items_product
+        FOREIGN KEY (product_id)
+        REFERENCES products(product_id)
+);
+
+CREATE TABLE stock_audit (
+    audit_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    action_type VARCHAR(30),
+    quantity_changed INT,
+    action_date DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO customers (customer_name, email) VALUES
+('Ali Ahmad', 'ali@example.com'),
+('Siti Aminah', 'siti@example.com'),
+('John Tan', 'john@example.com');
+
+INSERT INTO products
+(product_name, price, stock_quantity) VALUES
+('Remote Control Car', 89.90, 20),
+('Building Blocks', 49.90, 30),
+('Teddy Bear', 39.90, 15),
+('Puzzle Set', 25.00, 25);
